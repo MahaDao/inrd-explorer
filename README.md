@@ -1,5 +1,8 @@
-## SAI UI Explorer
+INRD UI Explorer
+================
 
-1) npm install
+This is the explorer for the INRD stablecoin which is hosted at (inrd.maharajadao.com)[https://inrd.maharajadao.com/].
 
-2) npm start
+# Instructions
+1) yarn
+2) yarn start

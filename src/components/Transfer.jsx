@@ -60,8 +60,8 @@ class Transfer extends Component {
                   <label>Token</label>
                   <select ref={(input) => this.token = input} >
                     <option value="gem">WETH</option>
-                    <option value="gov">MKR</option>
-                    <option value="dai">DAI</option>
+                    <option value="gov">MAHA</option>
+                    <option value="dai">INRD</option>
                     <option value="skr">PETH</option>
                   </select>
                   {

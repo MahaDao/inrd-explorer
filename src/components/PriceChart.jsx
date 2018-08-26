@@ -61,9 +61,9 @@ class PriceChart extends React.Component {
           <div className="row">
             <div className="col-md-12">
               <select className="changePrice" ref={(input) => this.token = input} onChange={ this.changePriceChart }>
-                <option value="ethusd">ETH/USD</option>
-                <option value="ethdai">ETH/DAI</option>
-                <option value="daiusd">DAI/USD</option>
+                <option value="ethusd">ETH/INR</option>
+                <option value="ethdai">ETH/INRD</option>
+                <option value="daiusd">INRD/INR</option>
                 <option value="skreth">PETH/ETH</option>
               </select>
               {

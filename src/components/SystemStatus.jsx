@@ -66,7 +66,7 @@ class SystemStatus extends Component {
                   </span>
                 </div>
                 <div>
-                  <strong title="Percentage number of maximum DAI already issued">Debt Ceiling Ratio</strong>
+                  <strong title="Percentage number of maximum INRD already issued">Debt Ceiling Ratio</strong>
                   {
                     this.props.system.dai.totalSupply.gte(0) && this.props.system.tub.cap.gte(0)
                     ?
@@ -98,7 +98,7 @@ class SystemStatus extends Component {
                           this.props.system.tub.avail_bust_skr.gte(0) && this.props.system.tub.avail_bust_dai.gte(0)
                           ?
                             <span>
-                              Sell { printNumber(this.props.system.tub.avail_bust_dai) } DAI<br />
+                              Sell { printNumber(this.props.system.tub.avail_bust_dai) } INRD<br />
                               Buy { printNumber(this.props.system.tub.avail_bust_skr) } PETH
                             </span>
                           :
@@ -119,7 +119,7 @@ class SystemStatus extends Component {
                           ?
                             <span>
                               Sell { printNumber(this.props.system.tub.avail_boom_skr) } PETH<br />
-                              Buy { printNumber(this.props.system.tub.avail_boom_dai) } DAI
+                              Buy { printNumber(this.props.system.tub.avail_boom_dai) } INRD
                             </span>
                           :
                             'Loading...'
@@ -140,7 +140,7 @@ class SystemStatus extends Component {
               </div>
               <div className="more" style={ {display: this.state.viewMore ? 'block' : 'none'} }>
                 <div>
-                  <strong title="Price of 1 ETH in USD (as determined by the median of the feeds)">ETH/USD</strong>
+                  <strong title="Price of 1 ETH in INR (as determined by the median of the feeds)">ETH/INR</strong>
                   {
                     this.props.system.pip.val.gte(0)
                     ?
@@ -154,7 +154,7 @@ class SystemStatus extends Component {
                   }
                 </div>
                 <div>
-                  <strong title="Price of 1 MKR in USD (as determined by the median of the feeds)">MKR/USD</strong>
+                  <strong title="Price of 1 MAHA in INR (as determined by the median of the feeds)">MAHA/INR</strong>
                   {
                     this.props.system.pep.val.gte(0)
                     ?
@@ -168,7 +168,7 @@ class SystemStatus extends Component {
                   }
                 </div>
                 <div>
-                  <strong title="Target price for 1 DAI in USD">DAI/USD</strong>
+                  <strong title="Target price for 1 INRD in INR">INRD/INR</strong>
                   {
                     this.props.system.vox.par.gte(0)
                     ?
@@ -198,7 +198,7 @@ class SystemStatus extends Component {
                   }
                 </div>
                 <div>
-                  <strong title="Maximum number of DAI that can be issued">Debt Ceiling</strong>
+                  <strong title="Maximum number of INRD that can be issued">Debt Ceiling</strong>
                   {
                     this.props.system.tub.cap.gte(0)
                     ?
@@ -218,7 +218,7 @@ class SystemStatus extends Component {
                   }
                 </div>
                 <div>
-                  <strong title="Discount/premium relative to Dai target price at which the system buys/sells collateral PETH for DAI. When negative, collateral is being sold at a discount (under ‘bust’) and bought at a premium (under ‘boom’)">Spread (Bust/Boom)</strong>
+                  <strong title="Discount/premium relative to INRD target price at which the system buys/sells collateral PETH for INRD. When negative, collateral is being sold at a discount (under ‘bust’) and bought at a premium (under ‘boom’)">Spread (Bust/Boom)</strong>
                   {
                     this.props.system.tap.gap.gte(0)
                     ?
@@ -272,7 +272,7 @@ class SystemStatus extends Component {
                   </span>
                 </div>
                 <div>
-                  <strong title="Annual % change of Dai target price in USD. This represents Dai deflation or inflation when positive or negative, respectively">DAI Target Rate (365 days)</strong>
+                  <strong title="Annual % change of INRD target price in INR. This represents INRD deflation or inflation when positive or negative, respectively">INRD Target Rate (365 days)</strong>
                   <span>
                     {
                       this.props.system.vox.way.gte(0)

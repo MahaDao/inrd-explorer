@@ -57,7 +57,7 @@ const TerminologyModal = (props) => {
             <strong>Free:</strong> Remove collateral from a CDP<br />
             <strong>Give:</strong> Transfer CDP ownership<br />
             <strong>Join:</strong> Exchange ETH for PETH<br />
-            <strong>Keepers:</strong> Independent economic actors that trade Dai, CDPs and/or MKR, create Dai or close CDPs and seek arbitrage opportunities in The Dai Stablecoin System and as a result help maintain Dai market rationality and price stability<br />
+            <strong>Keepers:</strong> Independent economic actors that trade Dai, CDPs and/or MAHA, create Dai or close CDPs and seek arbitrage opportunities in The Dai Stablecoin System and as a result help maintain Dai market rationality and price stability<br />
             <strong>Liq. Penalty:</strong> Penalty charged by the system upon liquidation, as a percentage of the CDP collateral<br />
             <strong>Liq. Ratio:</strong> Collateralization ratio below which a CDP may be liquidated<br />
             <strong>Liquidation price:</strong> ETH price at which a CDP will become unsafe and at risk of liquidation<br />

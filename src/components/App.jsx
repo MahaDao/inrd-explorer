@@ -1797,7 +1797,7 @@ class App extends Component {
                                   this.state.system.pep.val
                                 ).round(0);
           if (futureGovDebt.gt(this.state.system.gov.myBalance)) {
-            error = `Not enough balance of MKR to shut CDP ${cup}.`;
+            error = `Not enough balance of MAHA to shut CDP ${cup}.`;
           } else {
             if (this.state.profile.mode === 'proxy' && web3.isAddress(this.state.profile.proxy)) {
               this.executeMethodCup(method, cup, [
@@ -2081,7 +2081,7 @@ class App extends Component {
   }
 
   approve = (token, dst, val) => {
-    const tokenName = token.replace('gem', 'weth').replace('gov', 'mkr').replace('skr', 'peth').toUpperCase();
+    const tokenName = token.replace('gem', 'weth').replace('gov', 'maha').replace('skr', 'peth').replace('dai', 'inrd').toUpperCase();
     const action = {
       gem: {
         tub: 'Join',
@@ -2121,7 +2121,7 @@ class App extends Component {
 
   approveAll = val => {
     const id = Math.random();
-    const title = `WETH/MKR/PETH/DAI: ${val ? 'approve': 'deny'} all`;
+    const title = `WETH/MAHA/PETH/INRD: ${val ? 'approve': 'deny'} all`;
     this.logRequestTransaction(id, title);
     const log = (e, tx) => {
       if (!e) {
@@ -2251,14 +2251,14 @@ class App extends Component {
 
     const daiActions = {
       cash: {
-        display: 'Convert DAI to WETH',
+        display: 'Convert INRD to WETH',
         active: this.state.system.tub.off === true && this.state.system.dai.myBalance.gt(0),
-        helper: 'Exchange your DAI for ETH at the cage price (enabled upon cage)'
+        helper: 'Exchange your INRD for ETH at the cage price (enabled upon cage)'
       },
       mock: {
-        display: 'Convert WETH to DAI',
+        display: 'Convert WETH to INRD',
         active: this.state.system.tub.off === true && this.state.system.gem.myBalance.gt(0),
-        helper: 'Exchange your ETH for DAI at the cage price (enabled upon cage)'
+        helper: 'Exchange your ETH for INRD at the cage price (enabled upon cage)'
      }
     };
 
@@ -2266,7 +2266,7 @@ class App extends Component {
       <div className="content-wrapper">
         <section className="content-header">
           <h1>
-            <a href="/" className="logo"><img src={ logo } alt="Maker Dai Explorer" width="50" /> - DAI Explorer</a>
+            <a href="/" className="logo">INRD Explorer</a>
           </h1>
           {
             settings.chain[this.state.network.network].proxyFactory
@@ -2352,8 +2352,8 @@ class App extends Component {
                     </div>
                   </div>
                 </div> */}
-                <a className="resource buy-dai" href="https://oasisdex.com/#trade/W-ETH/DAI" target="_blank" rel="noopener noreferrer" >
-                  <span>Buy DAI</span>
+                <a className="resource buy-dai" href="https://dex.maharajadao.com/#trade/MAHA/INRD" target="_blank" rel="noopener noreferrer" >
+                  <span>Buy INRD</span>
                 </a>
                 {
                   this.state.network.defaultAccount &&
@@ -2365,12 +2365,12 @@ class App extends Component {
                 }
                 {
                   this.state.system.pep.address && this.state.network.network !== 'private' &&
-                  <FeedValue address={ this.state.system.pep.address } val={ this.state.system.pep.val } currency="MKR" />
+                  <FeedValue address={ this.state.system.pep.address } val={ this.state.system.pep.val } currency="MAHA" />
                 }
                 <ResourceButtons handleOpenVideoModal={ this.handleOpenVideoModal } handleOpenTerminologyModal={ this.handleOpenTerminologyModal } />
                 <div>
-                  <a href="#action" onClick={this.handleOpenTermsModal} data-modal="announcement">Dai Public Announcement</a><br />
-                  <a href="#action" onClick={this.handleOpenTermsModal} data-modal="terms">Dai Terms of Service</a>
+                  <a href="#action" onClick={this.handleOpenTermsModal} data-modal="announcement">INRD Public Announcement</a><br />
+                  <a href="#action" onClick={this.handleOpenTermsModal} data-modal="terms">INRD Terms of Service</a>
                 </div>
               </div>
             </div>

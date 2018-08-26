@@ -104,7 +104,7 @@ class TokenAllowance extends Component {
                   </span>
                 </div>
                 <div>
-                  <span>MKR</span>
+                  <span>MAHA</span>
                   <span>Wipe/Shut</span>
                   <span>
                     {
@@ -115,7 +115,7 @@ class TokenAllowance extends Component {
                   </span>
                 </div>
                 <div>
-                  <span>DAI</span>
+                  <span>INRD</span>
                   <span>Wipe/Shut</span>
                   <span>
                     {
@@ -126,7 +126,7 @@ class TokenAllowance extends Component {
                   </span>
                 </div>
                 <div>
-                  <span>DAI</span>
+                  <span>INRD</span>
                   <span>Bust/Cash</span>
                   <span>
                     {

@@ -86,7 +86,7 @@ class FeedValue extends React.Component {
                     formatValue={ n => formatNumber(n, 3) }
                     className="printedNumber"
                     onClick = { copyToClipboard } />
-                  </strong> USD/{ this.props.currency }
+                  </strong> INR/{ this.props.currency }
                 </p>
                 {/* {
                   this.state.last
