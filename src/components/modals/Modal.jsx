@@ -320,7 +320,7 @@ class Modal extends Component {
             error = 'Not enough balance of INRD to wipe this amount.';
             this.submitEnabled = false;
           } else if (this.props.tab(this.props.system.tub.cups[cup]).lt(valueWei)) {
-            error = `Debt in CDP ${cup} is lower than this amount of DAI.`;
+            error = `Debt in CDP ${cup} is lower than this amount of INRD.`;
             this.submitEnabled = false;
           } else {
             const age = 1200; // We calculate what will be the fee in 20 minutes (due mining time)
@@ -385,14 +385,14 @@ class Modal extends Component {
           let error = '';
           this.submitEnabled = true;
           if (this.props.system.dai.myBalance.lt(valueWei)) {
-            error = 'Not enough balance to cash this amount of DAI.';
+            error = 'Not enough balance to cash this amount of INRD.';
             this.submitEnabled = false;
           }
           document.getElementById('warningMessage').innerHTML = error;
         }
         break;
       case 'mock':
-        text = `Please set amount of DAI you mock to cash`;
+        text = `Please set amount of INRD you mock to cash`;
         if (!this.props.proxyEnabled) {
           text += '<br />You might be requested for signing two transactions if there is not enough allowance in WETH to complete this transaction.';
         }
@@ -402,7 +402,7 @@ class Modal extends Component {
           let error = '';
           this.submitEnabled = true;
           if (wdiv(this.props.system.gem.myBalance, this.props.system.tap.fix).lt(valueWei)) {
-            error = 'Not enough balance of WETH to mock this amount of DAI.';
+            error = 'Not enough balance of WETH to mock this amount of INRD.';
             this.submitEnabled = false;
           }
           document.getElementById('warningMessage').innerHTML = error;
